@@ -1,0 +1,99 @@
+.App {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.image__container {
+  display: flex;
+  gap: 1rem;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.img {
+  position: relative
+}
+
+.img__style {
+  width: 200px;
+  height: 150px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  width: 200px;
+  height: 150px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  display: none;
+  opacity: 0.2;
+  background: lightgray;
+  z-index: 1;
+}
+
+.img:hover {
+    cursor: pointer;
+}
+
+.img:hover .overlay{
+  display: block;
+}
+
+.display__imglist {
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.display__modal {
+  width: 100%;
+  height: 500px;
+  z-index: 2;
+  /* opacity: 0.2; */
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.img__style-tile {
+  width: 30px;
+  height: 40px;
+
+}
+
+.img__style-tile1 {
+  width: 30px;
+  height: 40px;
+  border: 2px solid rgb(13, 0, 128);
+} 
+
+.modal__img {
+  height: 400px;
+  width: 500px;
+  z-index: 5;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 20px 50px rgba(120, 73, 158, 0.7);
+}
+
+.img__style-tile:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
